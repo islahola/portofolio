@@ -1,4 +1,5 @@
 import React from 'react'
+import {animateScroll as scroll} from 'react-scroll'
 import { FaBars } from 'react-icons/fa';
 import {Nav,NavbarContainer,
     NavLogo,MobileIcon,NavMenu,NavItem,NavLinks,NavBtn,NavBtnLinks} from './NavbarElement'
@@ -14,17 +15,39 @@ import {Nav,NavbarContainer,
                     </MobileIcon>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to="about">About</NavLinks>
+                            <NavLinks to="about"
+                             smooth={true} 
+                             duration={500}
+                             spy={true}
+                             exact={true}
+                             offset={-80}
+                             activeClass="active"
+                             >About</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="advance">Advance</NavLinks>
+                            <NavLinks to="skill" smooth={true} 
+                             duration={500}
+                             spy={true}
+                             exact={true}
+                             offset={-80}
+                             activeClass="active">Advance</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="portofolio">Portofolio</NavLinks>
+                            <NavLinks to="portofolio" smooth={true} 
+                             duration={500}
+                             spy={true}
+                             exact={true}
+                             offset={-80}
+                             activeClass="active">Portofolio</NavLinks>
                         </NavItem>
                     </NavMenu>
                     <NavBtn>
-                        <NavBtnLinks>Contact Me</NavBtnLinks>
+                        <NavBtnLinks to="contact"   
+                            duration={500}
+                             spy={true}
+                             exact={true}
+                             offset={-80}
+                             activeClass="active">Contact Me</NavBtnLinks>
                     </NavBtn>
                 </NavbarContainer>
             </Nav>
